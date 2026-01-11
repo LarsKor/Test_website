@@ -3,17 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Test Website — LarsKor</title>
+  <title>LarsKor — Portfolio & Test Website</title>
+  <meta name="description" content="Portfolio en test website van LarsKor — projecten, vaardigheden en contact.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#">LarsKor</a>
-      <button class="nav-toggle" aria-label="Open navigatie">☰</button>
-      <nav class="site-nav" id="site-nav">
+    <div class="container header-inner">
+      <a class="logo" href="#home">LarsKor</a>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-ghost" aria-label="Wissel thema">🌙</button>
+        <button class="nav-toggle" aria-label="Open navigatie" aria-expanded="false">☰</button>
+      </div>
+      <nav class="site-nav" id="site-nav" aria-label="Hoofdnavigatie">
         <a href="#home">Home</a>
-        <a href="#features">Features</a>
+        <a href="#about">Over mij</a>
+        <a href="#skills">Vaardigheden</a>
+        <a href="#projects">Projecten</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -21,43 +29,150 @@
 
   <main>
     <section id="home" class="hero">
-      <div class="container">
-        <h1>Welkom op de test website</h1>
-        <p>Een kleine, snelle en toegankelijke statische site om te testen en te demonstreren.</p>
-        <p><a class="btn" href="#contact">Neem contact op</a></p>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Hoi, ik ben Lars — ik bouw dingen op het web</h1>
+          <p class="lead">Een moderne, toegankelijke en responsieve statische site als startpunt voor portfolio's, demo's en kleine projecten.</p>
+          <p>
+            <a class="btn" href="#projects">Bekijk projecten</a>
+            <a class="btn btn-outline" href="#contact">Neem contact op</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=60" alt="Laptop workspace" loading="lazy">
+          <p class="muted">Webontwikkeling, design en snelle prototypes</p>
+        </div>
       </div>
     </section>
 
-    <section id="features" class="container features">
-      <h2>Wat je hier vindt</h2>
-      <ul>
-        <li>Responsief en modern ontwerp</li>
-        <li>Eenvoudig aan te passen HTML/CSS/JS</li>
-        <li>Geschikt om te deployen naar GitHub Pages</li>
-      </ul>
+    <section id="about" class="container about">
+      <h2>Over mij</h2>
+      <div class="grid cols-2">
+        <div>
+          <p>Ik ben een ontwikkelaar met interesse in front-end, toegankelijkheid en performantie. Deze site is een voorbeeld van wat je snel kunt starten met HTML/CSS/JS en hosten op GitHub Pages.</p>
+          <p>Ik werk graag met kleine, onderhoudbare oplossingen en leg de nadruk op leesbaarheid en gebruikerservaring.</p>
+          <p>
+            <a class="link" href="#contact">Stuur me een bericht →</a>
+          </p>
+        </div>
+        <aside class="card">
+          <h3>Snelle facts</h3>
+          <ul>
+            <li>Locatie: Nederland</li>
+            <li>Talen: Nederlands, Engels</li>
+            <li>Tools: HTML, CSS, JavaScript, Git</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="skills" class="container skills">
+      <h2>Vaardigheden</h2>
+      <div class="skill-list">
+        <div class="skill">
+          <div class="skill-head"><strong>HTML &amp; Semantiek</strong><span>95%</span></div>
+          <div class="skill-bar"><div style="width:95%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><strong>CSS &amp; Design</strong><span>90%</span></div>
+          <div class="skill-bar"><div style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><strong>JavaScript</strong><span>80%</span></div>
+          <div class="skill-bar"><div style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><strong>Accessibility</strong><span>85%</span></div>
+          <div class="skill-bar"><div style="width:85%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Projecten</h2>
+      <div class="grid cols-3">
+        <article class="card project">
+          <img src="https://images.unsplash.com/photo-1526378722585-1b1a6b9b8c66?auto=format&fit=crop&w=800&q=60" alt="Project screenshot">
+          <div class="card-body">
+            <h3>Portfolio Template</h3>
+            <p>Een lichte en snelle portfolio template, eenvoudig te fork-en en te hosten.</p>
+            <p><a class="link" href="#">Bekijk repo</a></p>
+          </div>
+        </article>
+
+        <article class="card project">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="Project screenshot">
+          <div class="card-body">
+            <h3>UI Componenten</h3>
+            <p>Verzameling van toegankelijke, herbruikbare UI-componenten in pure HTML/CSS/JS.</p>
+            <p><a class="link" href="#">Demo</a></p>
+          </div>
+        </article>
+
+        <article class="card project">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="Project screenshot">
+          <div class="card-body">
+            <h3>Statische blog</h3>
+            <p>Een eenvoudige statische blog op basis van Markdown en GitHub Pages.</p>
+            <p><a class="link" href="#">Lees meer</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="blog" class="container blog">
+      <h2>Laatste blogposts</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Verbeter je CSS workflow</h3>
+          <p class="muted">12 januari 2026 — 4 min lezen</p>
+          <p>Tips en best practices om je CSS modulair, onderhoudbaar en performant te houden.</p>
+          <p><a class="link" href="#">Lees verder →</a></p>
+        </article>
+        <article class="card">
+          <h3>Toegankelijke formulieren</h3>
+          <p class="muted">02 december 2025 — 5 min lezen</p>
+          <p>Praktische stappen om formulieren beter bruikbaar te maken voor iedereen.</p>
+          <p><a class="link" href="#">Lees verder →</a></p>
+        </article>
+      </div>
     </section>
 
     <section id="contact" class="container contact">
       <h2>Contact</h2>
-      <form id="contact-form">
-        <label for="name">Naam</label>
-        <input id="name" name="name" type="text" required>
+      <div class="grid cols-2">
+        <form id="contact-form" class="card form-card" aria-label="Contactformulier">
+          <label for="name">Naam</label>
+          <input id="name" name="name" type="text" required>
 
-        <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" required>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required>
 
-        <label for="message">Bericht</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Bericht</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
 
-        <button type="submit" class="btn">Verstuur</button>
-        <p id="form-status" role="status" aria-live="polite"></p>
-      </form>
+          <div class="form-actions">
+            <button type="submit" class="btn">Verstuur</button>
+            <p id="form-status" role="status" aria-live="polite" class="muted"></p>
+          </div>
+        </form>
+
+        <aside class="card">
+          <h3>Blijf in contact</h3>
+          <p>Je kunt me ook bereiken via sociale media of direct per e-mail.</p>
+          <ul class="social">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </aside>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© LarsKor — Test Website</p>
+    <div class="container footer-inner">
+      <p>© LarsKor — Gebouwd met ❤️ — <a href="#">Privacy</a></p>
     </div>
   </footer>
 

@@ -1,17 +1,27 @@
-# Test Website
+# Test Website — uitgebreid
 
-Deze repository bevat een eenvoudige statische website (HTML/CSS/JS) bedoeld als startpunt:
+Dit project is een uitgebreide versie van de oorspronkelijke statische site. Het bevat extra secties, verbeterde styling, een licht/donker thema en kleine interacties.
 
-- `index.html` — hoofdpagina
-- `styles.css` — basisstijl
-- `script.js` — kleine interacties (navigatie + formulier)
+Bestanden:
+- `index.html` — hoofdpagina met secties (Home, Over mij, Vaardigheden, Projecten, Blog, Contact)
+- `styles.css` — uitgebreidere styling, responsive grid, thema variabelen
+- `script.js` — eenvoudige interacties: navigatie, thema wissel, formulier, reveal-on-scroll
 
-Hoe lokaal bekijken:
+Lokaal bekijken:
 1. Clone de repo
-2. Open `index.html` in je browser
+2. Open bij voorkeur via een lokale webserver, bijvoorbeeld met Python:
 
-Deploy op GitHub Pages:
-- Ga naar de repository instellingen -> Pages en kies de `main` branch (of maak een dedicated `gh-pages` branch).
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+Hosten op GitHub Pages:
+- Ga naar Settings → Pages en kies `main` branch met root (`/`).
+- De site wordt beschikbaar op: `https://LarsKor.github.io/Test_website/` enkele minuten na inschakelen.
 
 Aanpassen:
-- Vervang teksten, kleuren en voeg extra pagina's toe in dezelfde map.
+- Vervang teksten, afbeeldingen en links naar je eigen projecten.
+- Voeg extra pagina's toe of converteer naar een SSG (Jekyll/Hugo) als je veel content wil beheren.
+
+Licentie: vrij gebruikelijk voorbeeldproject — pas aan naar wens.
